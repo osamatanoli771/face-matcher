@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AI-powered face matching software that compares facial features and calculates similarity percentage">
+    <title>Face Matcher - AI Face Comparison Tool</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Face Matcher</h1>
+            <p class="subtitle">AI-Powered Facial Feature Comparison</p>
+        </header>
+
+        <div class="main-content">
+            <!-- First Image Upload -->
+            <div class="upload-section">
+                <h2 class="section-title">
+                    <span class="section-number">1</span>
+                    First Person
+                </h2>
+                <div class="upload-zone" id="upload-zone-1">
+                    <div class="upload-icon">📸</div>
+                    <div class="upload-text">Click or drag image here</div>
+                    <div class="upload-hint">Supports JPG, PNG (Max 10MB)</div>
+                    <input type="file" id="file-input-1" accept="image/*">
+                </div>
+                <div class="image-preview" id="preview-1">
+                    <img src="" alt="Preview 1" class="preview-img" id="preview-img-1">
+                    <button class="remove-btn" id="remove-1">×</button>
+                </div>
+            </div>
+
+            <!-- Second Image Upload -->
+            <div class="upload-section">
+                <h2 class="section-title">
+                    <span class="section-number">2</span>
+                    Second Person
+                </h2>
+                <div class="upload-zone" id="upload-zone-2">
+                    <div class="upload-icon">📸</div>
+                    <div class="upload-text">Click or drag image here</div>
+                    <div class="upload-hint">Supports JPG, PNG (Max 10MB)</div>
+                    <input type="file" id="file-input-2" accept="image/*">
+                </div>
+                <div class="image-preview" id="preview-2">
+                    <img src="" alt="Preview 2" class="preview-img" id="preview-img-2">
+                    <button class="remove-btn" id="remove-2">×</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Compare Button -->
+        <div class="compare-section">
+            <button class="compare-btn" id="compare-btn" disabled>
+                <span id="btn-text">Compare Faces</span>
+            </button>
+            <div class="error-message" id="error-message"></div>
+        </div>
+
+        <!-- Results Section -->
+        <div class="results-section" id="results-section">
+            <h2>Match Results</h2>
+            <div class="match-percentage" id="match-percentage">0%</div>
+            <div class="match-level" id="match-level">No Match</div>
+            
+            <div class="progress-bar">
+                <div class="progress-fill" id="progress-fill" style="width: 0%"></div>
+            </div>
+
+            <div class="match-details">
+                <div class="detail-card">
+                    <div class="detail-label">Match Score</div>
+                    <div class="detail-value" id="detail-score">0%</div>
+                </div>
+                <div class="detail-card">
+                    <div class="detail-label">Face Distance</div>
+                    <div class="detail-value" id="detail-distance">0.0</div>
+                </div>
+                <div class="detail-card">
+                    <div class="detail-label">Confidence</div>
+                    <div class="detail-value" id="detail-confidence">Low</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
